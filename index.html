@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>GMEROPY STORE</title>
+  <meta property="og:title" content="GMEROPY STORE" />
+  <meta property="og:description" content="Top Up cepat, harga hemat, support 24 jam. Kunjungi GMEROPY STORE sekarang!" />
+  <meta property="og:image" content="https://i.imgur.com/0fkh4PO.png" />
+  <meta property="og:url" content="https://gmeropy.github.io/GMEROPY-STORE/" />
+  <link rel="stylesheet" href="M.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-left">
+      <img src="/Foto/gme.png" alt="Banner" class="navbar-banner">
+    </div>
+    <div class="navbar-right">
+      <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+    </div>
+  </nav>
+
+  <!-- Slider -->
+  <div class="slider-container">
+    <div class="slider">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQB-M8kb5727agXM-USS2VAcZSVQJB-iJ_ISZrwMa3zgXHHvRzA8LOO_xov&s=10" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2lJMz6OLek1l7rDajD3g0se6Q6Trtpc_kawlbS1nccZ7yvUwi0ucfC2s&s=10" />
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNFwA3FMpwDoNXzVEKZT0skctyyB45ntDqbbgUrI5Oky2rxLCQLugtVCOW&s=10" />
+    </div>
+  </div>
+
+  <!-- Kategori -->
+  <div class="category-container">
+    <div class="category-slider" id="categorySlider">
+      <div class="category-item">ALL</div>
+      <div class="category-item">Game</div>
+      <div class="category-item">Joki</div>
+      <div class="category-item">Pulsa</div>
+    </div>
+    <div class="category-indicator" id="categoryIndicator"></div>
+  </div>
+  
+  <!-- Game Cards -->
+  <div class="game-cards">
+    <!-- Mobile Legend -->
+    <div class="game-wrapper">
+      <a href="/Game/ml.html" style="text-decoration: none; color: inherit;">
+        <div class="game-card">
+          <img src="/Foto/ml.jpeg">
+        </div>
+        <p class="game-name">Mobile Legend</p> 
+      </a>
+    </div>
+
+    <!-- Free Fire -->
+    <div class="game-wrapper" onclick="openModal()">
+      <div class="game-card">
+        <img src="/Foto/ff.png">
+      </div>
+      <p class="game-name">Free Fire</p>
+    </div>
+
+    <!-- PUBG -->
+    <div class="game-wrapper">
+      <a href="/Game/pubg.html" style="text-decoration: none; color: inherit;">
+        <div class="game-card">
+          <img src="/Foto/pubg.jpeg">
+        </div>
+        <p class="game-name">PUBG</p>
+      </a>
+    </div>
+
+    <!-- MCGG -->
+    <div class="game-wrapper">
+      <a href="/Game/mcgg.html" style="text-decoration: none; color: inherit;">
+        <div class="game-card">
+          <img src="/Foto/mcgg.png">
+        </div>
+        <p class="game-name">MCGG</p>
+      </a>
+    </div>
+
+    <!-- HOK DAT -->
+    <div class="game-wrapper">
+      <a href="/Game/Hok.html" style="text-decoration: none; color: inherit;">
+        <div class="game-card">
+          <img src="/Foto/hok.png">
+        </div>
+        <p class="game-name">Honor Of Kings</p>
+      </a>
+    </div>
+
+    <!-- CALL OF DUTY MOBILE -->
+    <div class="game-wrapper">
+      <a href="/Game/CODM.html" style="text-decoration: none; color: inherit;">
+        <div class="game-card">
+          <img src="/Foto/CODM.png">
+        </div>
+        <p class="game-name">CALL OF DUTY MOBILE</p>
+      </a>
+    </div>
+  </div>
+
+  <!-- Modal Free Fire -->
+  <div id="gameModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <h2>FREE FIRE</h2>
+      <div class="modal-cards">
+        <a href="/Game/ff.html" style="text-decoration: none; color: inherit;">
+          <div class="modal-card">
+            <img src="/Foto/ff.png" />
+            <p>FREE FIRE</p>
+          </div>
+        </a>
+        <a href="/Game/ffmx.html" style="text-decoration: none; color: inherit;">
+          <div class="modal-card">
+            <img src="/Foto/ffmax.png" alt="Free Fire Max" />
+            <p>FREE FIRE MAX</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Pulsa Cards -->
+<div class="pulsa-cards" style="display: none;">
+  <div class="pulsa-wrapper">
+    <a href="/Pulsa/Tri.html">
+      <div class="pulsa-card"><img src="/Foto/Three.png" /></div>
+      <p class="pulsa-name">Tri</p>
+    </a>
+  </div>
+
+  <div class="pulsa-wrapper">
+    <a href="/Pulsa/Id.html">
+      <div class="pulsa-card"><img src="/Foto/Indosat.jpeg" /></div>
+      <p class="pulsa-name">Indosat</p>
+    </a>
+  </div>
+
+  <div class="pulsa-wrapper">
+    <a href="/Pulsa/XL.html">
+      <div class="pulsa-card"><img src="/Foto/XL.jpeg" /></div>
+      <p class="pulsa-name">XL</p>
+    </a>
+  </div>
+
+  <div class="pulsa-wrapper">
+    <a href="/Pulsa/Tl.html">
+      <div class="pulsa-card"><img src="/Foto/TLKM.jpeg" /></div>
+      <p class="pulsa-name">Telkomsel</p>
+    </a>
+  </div>
+
+  <div class="pulsa-wrapper">
+    <a href="/Pulsa/Ax.html">
+      <div class="pulsa-card"><img src="/Foto/AX.png" /></div>
+      <p class="pulsa-name">Axis</p>
+    </a>
+  </div>
+
+  <div class="pulsa-wrapper">
+    <a href="/Pulsa/Sm.html">
+      <div class="pulsa-card"><img src="/Foto/SM.png" /></div>
+      <p class="pulsa-name">Smartfren</p>
+    </a>
+  </div>
+</div>
+
+
+<script src="oy.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

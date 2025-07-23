@@ -1,0 +1,226 @@
+body {
+  margin: 0;
+  background: linear-gradient(135deg,#203a43);
+  font-family: sans-serif;
+}
+
+.slider-container {
+  display: flex;
+  align-content: center;
+  margin: 20px 30px;
+  width: 300px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.slider {
+  gap: 20px;
+  display: flex;
+  width: fit-content;
+  transition: transform 1s ease-in-out;
+  justify-content: center;
+  align-content: center;
+}
+
+.slider img {
+  width: 300px;
+  height: 150px;
+  border-radius: 20px;
+  flex-shrink: 0;
+}
+
+.category-container {
+  position: relative;
+  margin: 20px;
+  overflow-x: auto;
+}
+
+.category-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 10px 0;
+  scrollbar-width: none;
+}
+
+.category-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.category-item {
+  background-color: #222;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  white-space: nowrap;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.category-indicator {
+  height: 3px;
+  background: #00ff99;
+  border-radius: 20px;
+  width: 60px;
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  transition: left 0.3s ease;
+}
+
+.game-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 20px 30px;
+}
+
+.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+
+.game-cards {
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;   /* Tambahkan ini */
+  gap: 16px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;            /* Agar selalu di tengah halaman */
+}
+
+.game-card:hover {
+      outline: none;
+      transform: translateY(-6px);
+      box-shadow:
+        0 0 16px 3px #00fff7ff,
+        0 0 40px 6px #00fff7ee;
+      border-color: #00fff7ff;
+      transition: 0.5s ease-in-out;
+    }
+
+.game-card img {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.game-name {
+  color: #00fff7ff;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.category-item.active {
+  background-color: #00ff99;
+  color: #green;
+  font-weight: bold;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-left img.navbar-banner {
+  height: 40px;
+  border-radius: 6px;
+}
+
+.hamburger-menu {
+  font-size: 26px;
+  color: red;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.hamburger-menu:hover {
+  background-color: #222;
+}
+
+/* Reset default gaya <a> agar tidak ganggu layout */
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+/* Gaya khusus untuk card yang pakai <a> */
+a.game-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+  text-decoration: none;
+  color: #00fff7ff; /* warna teks */
+}
+
+a.game-wrapper .game-name {
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+/* Kalau ada hover style, samakan juga */
+a.game-wrapper:hover .game-card {
+  outline: none;
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 16px 3px #00fff7ff,
+    0 0 40px 6px #00fff7ee;
+  border-color: #00fff7ff;
+  transition: 0.5s ease-in-out;
+}
+
+.pulsa-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pulsa-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80px;
+}
+
+.pulsa-card {
+  background: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  width: 100%;
+  height: 80px;
+}
+
+.pulsa-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pulsa-name {
+  color: #00fff7ff;
+  font-size: 14px;
+  margin-top: 8px;
+  text-align: center;
+}
